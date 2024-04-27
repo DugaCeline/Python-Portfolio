@@ -1,0 +1,32 @@
+#import statements
+
+import numpy as np
+
+
+# 1-a) Create an 1-d array named 'arr_int' of integers from 45 to 55 inclusive
+# 1-b) Read back first 4 elements of 'arr_int'
+# 1-c) Read back last element of 'arr_int'
+
+arr_int = np.array(np.arange(45,56))
+print(arr_int)
+print(arr_int[0:4])
+print(arr_int[-1])
+
+
+# 2-a) Create a 1-d array named 'arr_1' of 12 values from the random-normal distribution
+# 2-b) Create a boolean array named ' arr_1_bool' which has "True" where the value in 'arr_1' is greater than 0.5
+# 2-c) Reshape the 1-d array 'arr_1' to a 3 row, 4 column 2-d array called 'arr_2'
+
+arr_1 = np.random.rand(12)
+print(arr_1)
+arr_1_bool = np.greater(arr_1,0.5)
+print(arr_1_bool)
+arr_2 = arr_1.reshape(3,4)
+print(arr_2)
+
+
+# 3-a) Add first 4 elements of 'arr_int' to first row of 'arr_2'. Store the result as 'arr_3'
+# 3-b) Find the mean of 'arr_3'
+arr_3 = arr_2[0] + arr_int[:4]
+print(arr_3)
+print(arr_3.mean())
